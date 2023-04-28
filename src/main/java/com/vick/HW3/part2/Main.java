@@ -10,6 +10,7 @@ public class Main {
             new Thread(() -> {
                 for (int j = 0; j < 10; j++) {
                     counter.increment();
+                    System.out.printf("counter = %d , поток - %s%n", counter.getValue(), Thread.currentThread().getName());
                 }
             }).start();
             Thread.sleep(100);
